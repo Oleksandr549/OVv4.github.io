@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oleksandr Vyshnevskyi — Front-End Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="logo" href="#">OV.</a>
+    <div class="nav-r">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-pill"><span class="pulse"></span>Available for Projects</div>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- mobile nav overlay -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about" class="nm-link">About</a>
+    <a href="#skills" class="nm-link">Skills</a>
+    <a href="#projects" class="nm-link">Work</a>
+    <a href="#process" class="nm-link">Process</a>
+    <a href="#contact" class="nm-link">Contact</a>
+    
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-grid-lit" id="heroGridLit"></div>
+    <div class="hero-glow-orb" id="heroOrb"></div>
+    <div class="hero-c">
+      <div class="hero-tag" id="heroTag"><span class="pulse"></span>Front-End Developer · Available for Projects</div>
+      <div class="hero-name">
+        <span class="line"><span class="inner" id="heroL1">Oleksandr</span></span>
+        <span class="line"><span class="inner accent" id="heroL2">Vyshnevskyi</span></span>
+      </div>
+      <p class="hero-sub" id="heroSub">I turn ideas into websites that work — fast to load, easy to navigate, and built
+        to leave an impression.</p>
+      <div class="hero-btns" id="heroBtns">
+        <a href="#projects" class="btn-g">See My Work ↓</a>
+        <a href="#contact" class="btn-o">Let's Talk →</a>
+      </div>
+    </div>
+    <div class="fi-wrap" id="fiWrap"></div>
+    <div class="hero-scroll-hint" id="heroScroll">
+      <span class="scroll-lbl">Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq" style="position:relative;z-index:2">
+    <div class="mq-t">
+      <span class="mq-i">HTML5 <span class="mq-sep">✦</span></span>
+      <span class="mq-i">CSS3 <span class="mq-sep">✦</span></span>
+      <span class="mq-i">JavaScript <span class="mq-sep">✦</span></span>
+      <span class="mq-i">PHP <span class="mq-sep">✦</span></span>
+      <span class="mq-i">Python <span class="mq-sep">✦</span></span>
+      <span class="mq-i">Figma <span class="mq-sep">✦</span></span>
+      <span class="mq-i">GitHub <span class="mq-sep">✦</span></span>
+      <span class="mq-i">UI / UX <span class="mq-sep">✦</span></span>
+      <span class="mq-i">Responsive Design <span class="mq-sep">✦</span></span>
+      <span class="mq-i">SQL <span class="mq-sep">✦</span></span>
+      <span class="mq-i">HTML5 <span class="mq-sep">✦</span></span>
+      <span class="mq-i">CSS3 <span class="mq-sep">✦</span></span>
+      <span class="mq-i">JavaScript <span class="mq-sep">✦</span></span>
+      <span class="mq-i">PHP <span class="mq-sep">✦</span></span>
+      <span class="mq-i">Python <span class="mq-sep">✦</span></span>
+      <span class="mq-i">Figma <span class="mq-sep">✦</span></span>
+      <span class="mq-i">GitHub <span class="mq-sep">✦</span></span>
+      <span class="mq-i">UI / UX <span class="mq-sep">✦</span></span>
+      <span class="mq-i">Responsive Design <span class="mq-sep">✦</span></span>
+      <span class="mq-i">SQL <span class="mq-sep">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" style="padding:0">
+    <div class="wrap about-wrap">
+      <div class="about-l">
+        <div class="stag gsap-fade">About Me</div>
+        <h2 class="sh gsap-splitlines">Front-end developer<br>who ships on time and gets it right.</h2>
+        <div class="about-desc gsap-fade">
+          <p>I've been building websites for clients across the <strong>US, Canada, and Europe</strong> since 2022 —
+            landing pages, multi-page platforms, animated builds, custom calculators and forms. Projects of any scale.
+          </p>
+          <p>I write the code and handle the design. You get <strong>one person who understands both sides</strong> —
+            and takes full responsibility for the result.</p>
+          <p>Every project gets the same attention. Whether it's a one-pager or a full product, I treat it like it's my
+            own business on the line.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="exp-item gsap-fade">
+          <div>
+            <div class="exp-name">Dreamer Studio</div>
+            <div class="exp-role">Front-End Developer · Agency Collaboration</div>
+          </div>
+          <span class="exp-yr">2023 – 2024</span>
+        </div>
+        <div class="exp-item gsap-fade">
+          <div>
+            <div class="exp-name">Fiverr / UpWork</div>
+            <div class="exp-role">Freelance Front-End Developer</div>
+          </div>
+          <span class="exp-yr">2022 – Present</span>
+        </div>
+        <div class="exp-item gsap-fade">
+          <div>
+            <div class="exp-name">UITM Rzeszów</div>
+            <div class="exp-role">Bachelor's in Informatics</div>
+          </div>
+          <span class="exp-yr">2023 – Present</span>
+        </div>
+        <a href="cv.pdf" download class="btn-cv gsap-fade">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download CV
+        </a>
+      </div>
+      <div class="about-r gsap-fade">
+        <div class="about-photo-wrap" id="aboutPhotoWrap">
+          <div class="about-photo-bg"></div>
+          <img id="aboutPhoto" src="images/test.png" alt="Oleksandr Vyshnevskyi">
+          <div class="about-photo-overlay"></div>
+        </div>
+
+      </div>
+    </div><!-- /wrap -->
+  </section>
+
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="skills-intro-row">
+        <div>
+          <div class="stag gsap-fade">Skills & Stack</div>
+          <h2 class="sh gsap-splitlines">What I bring<br>to the table</h2>
+        </div>
+        <p class="skills-sub gsap-fade">Not just a list of technologies — each one is something I've shipped in a real
+          project, for a real client.</p>
+      </div>
+      <div class="sk-grid">
+
+        <!-- Row 1: hero card (8) + JS (4) -->
+        <div class="sk-card w4 gsap-card">
+          <svg class="sk-border-svg" id="sksvg0">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/html.png" alt="">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Core · Front-End</span><span class="sk-num">01</span></div>
+            <div class="sk-name">HTML & CSS</div>
+            <div class="sk-desc">My core strength. From simple layouts to complex animations and pixel-perfect
+              responsive builds — this is where quality shows.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span><span class="sk-tag">SCSS</span><span
+                  class="sk-tag">Animations</span></div>
+              <div class="sk-lvl">Level <span>Expert</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sk-card w4 gsap-card">
+          <svg class="sk-border-svg" id="sksvg1">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/js.png" alt="">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Interactivity</span><span class="sk-num">02</span></div>
+            <div class="sk-name">JavaScript</div>
+            <div class="sk-desc">DOM, async logic, API calls — interfaces that feel alive.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">ES6+</span><span class="sk-tag">DOM</span><span
+                  class="sk-tag">Fetch</span></div>
+              <div class="sk-lvl">Level <span>Advanced</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: three equal cards (4+4+4) -->
+       
+
+        <div class="sk-card w4 gsap-card">
+          <svg class="sk-border-svg" id="sksvg3">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/php.png" alt="PHP">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Back-End</span><span class="sk-num">03</span></div>
+            <div class="sk-name">PHP & Python</div>
+            <div class="sk-desc">Server-side logic, forms, database integration — full web experiences.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">PHP</span><span class="sk-tag">Python</span><span
+                  class="sk-tag">REST APIs</span></div>
+              <div class="sk-lvl">Level <span>Intermediate</span></div>
+            </div>
+          </div>
+        </div>
+ <div class="sk-card w6 gsap-card">
+          <svg class="sk-border-svg" id="sksvg2">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/figma.png" alt="Figma">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Design</span><span class="sk-num">04</span></div>
+            <div class="sk-name">UI/UX & Figma</div>
+            <div class="sk-desc">Figma to code, or scratch — something intentional, not a template.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">Figma</span><span class="sk-tag">Prototyping</span><span
+                  class="sk-tag">UI Systems</span></div>
+              <div class="sk-lvl">Level <span>Proficient</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="sk-card w6 gsap-card">
+          <svg class="sk-border-svg" id="sksvg4">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/git.png" alt="GitHub">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Tools</span><span class="sk-num">05</span></div>
+            <div class="sk-name">GitHub</div>
+            <div class="sk-desc">Clean commits, branching, collaboration — every project tracked from day one.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">Git</span><span class="sk-tag">GitHub</span><span
+                  class="sk-tag">CLI</span></div>
+              <div class="sk-lvl">Level <span>Proficient</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: medium (6) + medium (6) -->
+        <div class="sk-card w4 gsap-card">
+          <svg class="sk-border-svg" id="sksvg5">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/db.png" alt="Database">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Databases</span><span class="sk-num">06</span></div>
+            <div class="sk-name">Microsoft SQL</div>
+            <div class="sk-desc">Structuring, querying and managing relational databases. Solid data foundations for
+              dynamic apps.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">SQL</span><span class="sk-tag">Queries</span><span
+                  class="sk-tag">Schema</span></div>
+              <div class="sk-lvl">Level <span>Intermediate</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sk-card w4 gsap-card">
+          <svg class="sk-border-svg" id="sksvg6">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/devise.png" alt="Devise">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Approach</span><span class="sk-num">07</span></div>
+            <div class="sk-name">Responsive Design</div>
+            <div class="sk-desc">Mobile-first, fluid layouts that adapt seamlessly to any screen — phone, tablet or wide
+              desktop.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">Mobile-first</span><span class="sk-tag">Cross-browser</span>
+              </div>
+              <div class="sk-lvl">Level <span>Expert</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: full-width communication card -->
+        <div class="sk-card w4 gsap-card">
+          <svg class="sk-border-svg" id="sksvg7">
+            <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
+          </svg>
+          <img class="sk-ghost" src="images/chat.png" alt="Communication">
+          <div class="sk-body">
+            <div class="sk-head"><span class="sk-cat">Soft Skills</span><span class="sk-num">08</span></div>
+            <div class="sk-name">Communication</div>
+            <div class="sk-desc">Clear briefs, honest timelines, zero ghosting. Always reachable, and you always know
+              where your project stands.</div>
+            <div class="sk-foot">
+              <div class="sk-tags"><span class="sk-tag">Freelance</span><span class="sk-tag">PM</span><span
+                  class="sk-tag">Delivery</span></div>
+              <div class="sk-lvl">Level <span>Advanced</span></div>
+            </div>
+          </div>
+        </div>
+
+      
+
+      </div><!-- /sk-grid -->
+    </div><!-- /wrap -->
+  </section>
+  <section id="projects">
+    <div class="proj-header gsap-fade">
+      <div>
+        <div class="stag">Selected Work</div>
+        <h2 class="sh">Projects</h2>
+      </div>
+      <div class="proj-total">38+</div>
+    </div>
+
+    <div class="proj-scroll-wrap" id="projScrollWrap">
+      <div class="proj-sticky" id="projSticky">
+        <div class="proj-track" id="projTrack">
+    <a href="https://oleksandr549.github.io/QBL.github.io/" target="_blank" class="proj-slide featured">
+            <div class="proj-thumb" style="background:linear-gradient(135deg,#040a0a,#081515)">
+              <div class="proj-thumb-inner">
+                <img src="images/QBL.png" alt="QBL" 
+         style="width:100%;height:100%;object-fit:cover;display:block">
+              </div>
+              <span class="proj-badge">Business</span>
+              <div class="proj-ext">↗</div>
+            </div>
+            <div class="proj-info">
+              <div class="proj-tag">Business · Landing</div>
+              <div class="proj-title">QBL</div>
+              <div class="proj-desc">Professional business landing page with structured layout and clear calls to
+                action.</div>
+              <div class="proj-foot">
+                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <div class="proj-arrow">Live →</div>
+              </div>
+            </div>
+          </a>
+          
+
+          <a href="https://oleksandr549.github.io/DreamApart/" target="_blank" class="proj-slide">
+            <div class="proj-thumb" style="background:linear-gradient(135deg,#060e08,#0c1c10)">
+              <div class="proj-thumb-inner">
+                <img src="images/DreamApart.png" alt="DreamApart" 
+         style="width:100%;height:100%;object-fit:cover;display:block">
+              
+              </div>
+              <span class="proj-badge">Real Estate</span>
+              <div class="proj-ext">↗</div>
+            </div>
+            <div class="proj-info">
+              <div class="proj-tag">Real Estate · UI</div>
+              <div class="proj-title">DreamApart</div>
+              <div class="proj-desc">Elegant real estate platform with property listings, clean UI and smooth user
+                experience throughout.</div>
+              <div class="proj-foot">
+                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <div class="proj-arrow">Live →</div>
+              </div>
+            </div>
+          </a>
+<a href="https://oleksandr549.github.io/VRLounge2.github.io/" target="_blank" class="proj-slide ">
+            <div class="proj-thumb" style="background:linear-gradient(135deg,#050510,#0d0820)">
+              <div class="proj-thumb-inner">
+                <img src="images/VRLounge.png" alt="VR Lounge" 
+         style="width:100%;height:100%;object-fit:cover;display:block">
+              </div>
+              <span class="proj-badge">Featured</span>
+              <div class="proj-ext">↗</div>
+            </div>
+            <div class="proj-info">
+              <div class="proj-tag">Immersive · Experience</div>
+              <div class="proj-title">VR Lounge</div>
+              <div class="proj-desc">Immersive landing page for a VR entertainment venue. Bold visuals, animated
+                sections and UI that pulls you in before you even put on the headset.</div>
+              <div class="proj-foot">
+                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <div class="proj-arrow">Live →</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://oleksandr549.github.io/Nations-On-Fire-git.io/" target="_blank" class="proj-slide">
+            <div class="proj-thumb" style="background:linear-gradient(135deg,#0f0400,#1e0800)">
+              <div class="proj-thumb-inner">
+                   <img src="images/NationsOnFire.png" alt="Nations On Fire" 
+         style="width:100%;height:100%;object-fit:cover;display:block">
+              </div>
+              <span class="proj-badge">Creative</span>
+              <div class="proj-ext">↗</div>
+            </div>
+            <div class="proj-info">
+              <div class="proj-tag">Creative · Bold</div>
+              <div class="proj-title">Nations On Fire</div>
+              <div class="proj-desc">Bold expressive website with strong visual identity and energetic design direction.
+              </div>
+              <div class="proj-foot">
+                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <div class="proj-arrow">Live →</div>
+              </div>
+            </div>
+          </a>
+
+         
+
+      
+
+
+        </div><!-- /proj-track -->
+        <div class="proj-counter"><span class="cur-num" id="projCurNum">01</span><span>/</span><span
+            id="projTotalNum">08</span></div>
+      </div><!-- /proj-sticky -->
+    </div><!-- /proj-scroll-wrap -->
+    <div class="proj-progress">
+      <div class="prog-bar-wrap">
+        <div class="prog-bar-fill" id="progFill"></div>
+      </div>
+    </div>
+
+    <!-- reveal button — part of projects section -->
+    <div id="projReveal">
+      <canvas class="reveal-canvas" id="revealCanvas"></canvas>
+      <div class="reveal-label" id="revealLabel">More work on GitHub</div>
+      <a href="projects.html" target="_blank" class="reveal-btn" id="revealBtn">
+        View All Work
+        <span class="rb-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── WOW 3 ─── -->
+  <div id="wow3">
+    <div class="wow3-orb1"></div>
+    <div class="wow3-orb2"></div>
+    <span class="wow3-eye gsap-fade">My approach</span>
+    <h2 class="wow3-h gsap-splitlines">Good websites don't<br>happen by <span class="glow">accident.</span></h2>
+    <p class="wow3-sub gsap-fade">I don't do "good enough." Every project — regardless of size or budget — gets proper
+      structure, clean code, and a design that holds up.</p>
+    <a href="#contact" class="btn-g gsap-fade" style="margin:0 auto;display:inline-flex">Start a Project →</a>
+    <div class="stats-strip gsap-stagger">
+      <div class="stat-col">
+        <div class="n">38+</div>
+        <div class="l">Projects delivered across 3 continents</div>
+      </div>
+      <div class="stat-col">
+        <div class="n">5.0</div>
+        <div class="l">Fiverr rating — 38 reviews</div>
+      </div>
+      <div class="stat-col">
+        <div class="n">3+</div>
+        <div class="l">Years building for real clients</div>
+      </div>
+      <div class="stat-col">
+        <div class="n">24h</div>
+        <div class="l">Average first response</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── REVIEWS ─── -->
+  <section id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <div class="stag gsap-fade">Client Reviews</div>
+      <h2 class="sh gsap-splitlines" style="margin-bottom:3.5rem">What clients<br>actually say.</h2>
+      <div class="reviews-grid" id="reviewsGrid">
+
+        <div class="review-card" data-col="0">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Oleksandr truly <strong>impressed</strong> with an attention to detail and coding
+            expertise that exceeded expectations. His proactive communication and ability to deliver on time made
+            working with him a seamless experience. A fantastic choice in website development!"</p>
+          <div class="review-footer">
+            <div class="review-avatar">IK</div>
+            <div>
+              <div class="review-name">Igor K.</div>
+              <div class="review-meta">United States · Custom Website · 4 days</div>
+            </div>
+            <div class="review-platform">Fiverr</div>
+          </div>
+        </div>
+
+        <div class="review-card" data-col="1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Fantastic experience — the work was done with <strong>great attention to
+              detail</strong> and exceeded my expectations. Highly recommend for anyone looking for top-quality
+            results."</p>
+          <div class="review-footer">
+            <div class="review-avatar">AR</div>
+            <div>
+              <div class="review-name">Andrei R.</div>
+              <div class="review-meta">Canada · Custom Website · 2 days</div>
+            </div>
+            <div class="review-platform">Fiverr</div>
+          </div>
+        </div>
+
+        <div class="review-card" data-col="2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Everything went very well and smoothly. <strong>There is nothing to improve.</strong>
+            Well done! I would recommend this guy to anyone."</p>
+          <div class="review-footer">
+            <div class="review-avatar">ID</div>
+            <div>
+              <div class="review-name">Client from Poland</div>
+              <div class="review-meta">Koszalin, Poland · Custom Website</div>
+            </div>
+            <div class="review-platform">UpWork</div>
+          </div>
+        </div>
+
+        <div class="review-card" data-col="0">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Oleksandr is <strong>very nice to work with</strong>. Everything was done very quickly
+            and the quality was very good."</p>
+          <div class="review-footer">
+            <div class="review-avatar">IV</div>
+            <div>
+              <div class="review-name">Ivan D.</div>
+              <div class="review-meta">Italy · Custom Website · 5 days · Repeat Client</div>
+            </div>
+            <div class="review-platform">Fiverr</div>
+          </div>
+        </div>
+
+        <div class="review-card" data-col="1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"<strong>Great work and very professional!</strong> Highly recommend!"</p>
+          <div class="review-footer">
+            <div class="review-avatar">SK</div>
+            <div>
+              <div class="review-name">Skip P.</div>
+              <div class="review-meta">United Kingdom · Custom Website · 3 days</div>
+            </div>
+            <div class="review-platform">Fiverr</div>
+          </div>
+        </div>
+
+        <div class="review-card" data-col="2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excellent work and good communication, <strong>professional approach</strong> to
+            project. Looking forward to work in future projects!"</p>
+          <div class="review-footer">
+            <div class="review-avatar">SP</div>
+            <div>
+              <div class="review-name">Sellw P.</div>
+              <div class="review-meta">Poland · Custom Website · 9 days</div>
+            </div>
+            <div class="review-platform">Fiverr</div>
+          </div>
+        </div>
+
+      </div><!-- /reviews-grid -->
+    </div><!-- /wrap -->
+  </section>
+
+  <!-- ─── PROCESS ─── -->
+  <section id="process">
+    <div class="wrap">
+      <div class="process-intro">
+        <div>
+          <div class="stag gsap-fade">How I Work</div>
+          <h2 class="sh gsap-splitlines">From brief<br>to live site.</h2>
+        </div>
+        <p class="skills-sub gsap-fade">No surprises, no endless back-and-forth. Here's exactly what working together
+          looks like — start to finish.</p>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step gsap-card">
+          <div class="process-num">01</div>
+          <div class="process-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+          </div>
+          <div class="process-title">Discovery</div>
+          <div class="process-desc">You tell me about the project — goals, audience, timeline, references. I ask the
+            right questions so nothing gets lost in translation.</div>
+        </div>
+
+        <div class="process-step gsap-card">
+          <div class="process-num">02</div>
+          <div class="process-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+          </div>
+          <div class="process-title">Design</div>
+          <div class="process-desc">I put together the layout and visual direction. You review, give feedback, and we
+            align before a single line of code gets written.</div>
+        </div>
+
+        <div class="process-step gsap-card">
+          <div class="process-num">03</div>
+          <div class="process-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <div class="process-title">Development</div>
+          <div class="process-desc">Clean code, responsive layout, animations where they add value. I keep you updated
+            throughout — no black box, no radio silence.</div>
+        </div>
+
+        <div class="process-step gsap-card">
+          <div class="process-num">04</div>
+          <div class="process-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="process-title">Delivery</div>
+          <div class="process-desc">Final review, any last tweaks, then handoff. You get the files, the access, and
+            everything working exactly as agreed.</div>
+        </div>
+
+      </div><!-- /process-steps -->
+    </div><!-- /wrap -->
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-wrap">
+        <div class="contact-l">
+          <div class="stag gsap-fade">Contact</div>
+          <h2 class="sh gsap-splitlines">Ready when<br>you are.</h2>
+          <p class="gsap-fade" style="margin-top:1.5rem">Whether it's a quick question or a full project brief — send a
+            message. I respond within 24 hours and keep the process straightforward from day one.</p>
+          <a href="mailto:oleksandr.vyshnevskyi.work@gmail.com"
+            class="c-email gsap-fade">oleksandr.vyshnevskyi.work@gmail.com</a>
+         
+          <div class="soc-row gsap-stagger">
+            <a href="https://linkedin.com/in/oleksandr-vyshnevskyi-71875734a" target="_blank" class="soc-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>LinkedIn
+            </a>
+            <a href="https://github.com/oleksandr549" target="_blank" class="soc-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>GitHub
+            </a>
+            <a href="https://www.upwork.com" target="_blank" class="soc-btn">UpWork</a>
+            <a href="https://t.me/username" target="_blank" class="soc-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-2.03 9.565c-.146.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.323 14.68l-2.95-.924c-.642-.204-.654-.642.136-.953l11.52-4.44c.535-.194 1.003.131.533 1.884z" />
+              </svg>Telegram
+            </a>
+            <a href="https://wa.me/48574096470" target="_blank" class="soc-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="gsap-fade">
+          <div class="cf-g"><label class="cf-lbl">Your Name</label><input type="text" class="cf-in"
+              placeholder="John Doe"></div>
+          <div class="cf-g"><label class="cf-lbl">Email Address</label><input type="email" class="cf-in"
+              placeholder="john@example.com"></div>
+          <div class="cf-g"><label class="cf-lbl">Project Brief</label><textarea class="cf-in"
+              placeholder="Tell me about your project — what you need, when you need it, and your budget..."></textarea>
+          </div>
+          <button class="cf-sub">Send Message →</button>
+        </div>
+      </div><!-- /contact-wrap -->
+    </div><!-- /wrap -->
+  </section>
+
+  <footer id="footer">
+    <canvas class="foot-canvas" id="footCanvas"></canvas>
+    <div class="foot-bg-gradient"></div>
+    <div class="foot-grid"></div>
+
+    <!-- main columns -->
+    <div class="foot-inner">
+
+      <!-- Brand -->
+      <div class="foot-brand-col">
+        <div class="foot-logo">OV.</div>
+        <p class="foot-tagline">Front-End Developer. Clean code, real results, every time.</p>
+        <div class="foot-avail"><span class="pulse"></span>Available for work</div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <div class="foot-col-title">Navigation</div>
+        <ul class="foot-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills &amp; Stack</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Platforms -->
+      <div>
+        <div class="foot-col-title">Find Me On</div>
+        <ul class="foot-links">
+          <li><a href="https://linkedin.com/in/oleksandr-vyshnevskyi-71875734a" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/oleksandr549" target="_blank">GitHub</a></li>
+          <li><a href="https://www.fiverr.com" target="_blank">Fiverr</a></li>
+          <li><a href="https://www.upwork.com" target="_blank">UpWork</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="foot-col-title">Get In Touch</div>
+        <div class="foot-contact-item">
+          <a class="foot-contact-icon" href="mailto:oleksandr.vyshnevskyi.work@gmail.com" aria-label="Email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+          </a>
+          <a href="mailto:oleksandr.vyshnevskyi.work@gmail.com" class="foot-contact-text">oleksandr.vyshnevskyi.work@gmail.com</a>
+        </div>
+        <div class="foot-contact-item">
+          <a class="foot-contact-icon" href="https://www.linkedin.com/in/oleksandr-vyshnevskyi-71875734a" target="_blank"
+            aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/oleksandr-vyshnevskyi-71875734a" target="_blank"
+            class="foot-contact-text">linkedin.com/in/oleksandr-v</a>
+        </div>
+        <div class="foot-contact-item">
+          <a class="foot-contact-icon" href="https://github.com/oleksandr549" target="_blank" aria-label="GitHub">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://github.com/oleksandr549" target="_blank"
+            class="foot-contact-text">github.com/oleksandr549</a>
+        </div>
+        <!-- Social icon row -->
+        <div class="foot-soc-row" style="margin-top:1.4rem">
+          <a href="https://linkedin.com/in/oleksandr-vyshnevskyi-71875734a" target="_blank" class="foot-soc"
+            aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="https://github.com/oleksandr549" target="_blank" class="foot-soc" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+          <a href="https://www.fiverr.com" target="_blank" class="foot-soc" aria-label="Fiverr">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.004 15.588a.995.995 0 10-1.99 0 .995.995 0 001.99 0zm-19.5-2.09h2.613v6.418h2.001v-6.418h1.73V11.57h-1.73v-.96c0-.702.283-.946.984-.946h.748V7.876h-1.128c-1.907 0-2.849.814-2.849 2.52v1.175H3.504v1.927zm7.269 0h3.912c-.07-.693-.528-1.157-1.312-1.157-.77 0-1.33.418-1.6 1.157zm3.912 2.018H10.85c.178.847.726 1.31 1.612 1.31.616 0 1.128-.22 1.458-.638l1.458.989c-.681.946-1.726 1.455-2.916 1.455-2.258 0-3.67-1.48-3.67-3.388 0-1.96 1.398-3.388 3.558-3.388 2.005 0 3.347 1.418 3.347 3.388 0 .23-.03.43-.07.65l-.042.022z" />
+            </svg>
+          </a>
+          <a href="https://www.upwork.com" target="_blank" class="foot-soc" aria-label="UpWork">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.917 2.37 5.295 5.281 5.295 2.913 0 5.283-2.378 5.283-5.295v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3.001-2.439-5.439-5.439-5.439z" />
+            </svg>
+          </a>
+          <a href="https://t.me/username" target="_blank" class="foot-soc" aria-label="Telegram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-2.03 9.565c-.146.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.323 14.68l-2.95-.924c-.642-.204-.654-.642.136-.953l11.52-4.44c.535-.194 1.003.131.533 1.884z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/48574096470" target="_blank" class="foot-soc" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /foot-inner -->
+
+    <div class="foot-divider"></div>
+
+    <div class="foot-bottom">
+      <span class="foot-copy">© 2025 Oleksandr Vyshnevskyi — Designed & built from scratch.</span>
+      <a href="#hero" class="foot-back">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 12V2M2 7l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+
+
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>
