@@ -541,7 +541,7 @@ nav#nav.s {
 
 /* ─── SECTIONS ─── */
 section {
-  padding: 9rem 5rem;
+  /* padding: 9rem 5rem; */
   position: relative;
   z-index: 2
 }
