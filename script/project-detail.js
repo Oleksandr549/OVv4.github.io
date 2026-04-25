@@ -69,65 +69,8 @@ function renderPage(p) {
     document.getElementById('pdHeroBrief').style.display = 'none';
   }
 
-  /* ── INFO STRIP ── */
-  const strip = document.getElementById('pdStrip');
-  const stripBlocks = [];
-
-  // Block 1 — Type
-  if (p.type) {
-    stripBlocks.push(`
-      <div class="pd-strip-block is-type">
-        <div class="pd-strip-label">Project Type</div>
-        <div class="pd-strip-val">${p.type}</div>
-      </div>
-    `);
-  }
-
-  // Block 2 — Stack
-  if (p.stack?.length) {
-    stripBlocks.push(`
-      <div class="pd-strip-block is-stack">
-        <div class="pd-strip-label">Tech Stack</div>
-        <div class="pd-strip-val">
-          ${p.stack.map(t => `<span class="pd-strip-chip">${t}</span>`).join('')}
-        </div>
-      </div>
-    `);
-  }
-
-  // Block 3 — Origin (country + year)
-  if (p.country || p.year) {
-    stripBlocks.push(`
-      <div class="pd-strip-block is-origin">
-        <div class="pd-strip-label">Origin</div>
-        <div class="pd-strip-val">
-          ${p.country ? `<span>${p.country}</span>` : ''}
-          ${p.year ? `<span class="pd-strip-year">${p.year}</span>` : ''}
-        </div>
-      </div>
-    `);
-  }
-
-  // Block 4 — Platform + Client
-  if (p.platform || p.client) {
-    stripBlocks.push(`
-      <div class="pd-strip-block is-platform">
-        <div class="pd-strip-label">Via</div>
-        <div class="pd-strip-val">
-          ${p.platform || ''}
-          ${p.client ? `<span class="pd-strip-sub">${p.client}</span>` : ''}
-        </div>
-      </div>
-    `);
-  }
-
-  // If fewer than 4 blocks, span them evenly
-  if (stripBlocks.length > 0) {
-    strip.style.gridTemplateColumns = `repeat(${stripBlocks.length}, 1fr)`;
-    strip.innerHTML = stripBlocks.join('');
-  } else {
-    strip.style.display = 'none';
-  }
+  /* ── INFO STRIP — hidden, replaced by sidebar ── */
+  document.getElementById('pdStrip').style.display = 'none';
 
   /* ── LEFT COLUMN ── */
   const left = document.getElementById('pdLeft');
@@ -190,12 +133,13 @@ function renderPage(p) {
     </div>
   </div>`;
 
-  // Project info box
+  // Project Info box — all fields, each in its own clearly labelled row
   const infoFields = [
-    p.client   && { label: 'Client',    val: p.client },
-    p.country  && { label: 'Country',   val: p.country },
-    p.year     && { label: 'Year',      val: p.year },
-    p.platform && { label: 'Platform',  val: p.platform },
+    p.type     && { label: 'Project Type', val: p.type,     accent: true },
+    p.year     && { label: 'Year',         val: p.year },
+    p.country  && { label: 'Country',      val: p.country },
+    p.client   && { label: 'Client',       val: p.client },
+    p.platform && { label: 'Platform',     val: p.platform },
   ].filter(Boolean);
 
   if (infoFields.length) {
@@ -206,9 +150,21 @@ function renderPage(p) {
       sidebarHtml += `
         <div class="pd-sb-field">
           <div class="pd-sb-field-label">${f.label}</div>
-          <div class="pd-sb-field-val">${f.val}</div>
+          <div class="pd-sb-field-val${f.accent ? ' accent' : ''}">${f.val}</div>
         </div>`;
     });
+
+    // Stack as its own block at the bottom of info box
+    if (p.stack?.length) {
+      sidebarHtml += `
+        <div class="pd-sb-field">
+          <div class="pd-sb-field-label">Tech Stack</div>
+          <div class="pd-sb-field-chips">
+            ${p.stack.map(t => `<span class="pd-sb-chip">${t}</span>`).join('')}
+          </div>
+        </div>`;
+    }
+
     sidebarHtml += `</div></div>`;
   }
 
@@ -223,6 +179,8 @@ function renderPage(p) {
     const gallerySection = document.getElementById('pdGallerySection');
     gallerySection.style.display = 'block';
     const grid = document.getElementById('pdGalleryGrid');
+    const countLbl = document.getElementById('pdGalleryCountLabel');
+    if (countLbl) countLbl.textContent = `${allMedia.length} ${allMedia.length === 1 ? 'image' : 'images'}`;
 
     allMedia.forEach((m, i) => {
       const item = document.createElement('div');
@@ -282,18 +240,11 @@ function renderPage(p) {
 
     navEl.innerHTML = navHtml;
 
-    // Animate nav cards on click (page transition)
+    // Animate nav cards on click (uses shared transition.js)
     navEl.querySelectorAll('.pd-nav-card').forEach(card => {
       card.addEventListener('click', e => {
         e.preventDefault();
-        const href = card.getAttribute('href');
-        const overlay = document.createElement('div');
-        overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:var(--bg);transform:translateY(100%);pointer-events:all;';
-        document.body.appendChild(overlay);
-        gsap.to(overlay, {
-          y: '0%', duration: .5, ease: 'power3.inOut',
-          onComplete: () => { window.location.href = href; }
-        });
+        window.ptNavigate(card.getAttribute('href'));
       });
     });
   } else {

@@ -20,10 +20,9 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="projects.html" class="nav-active">Work</a></li>
-        <li><a href="index.html#process">Process</a></li>
+   
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <div class="nav-pill"><span class="pulse"></span>Available for Projects</div>
       <button class="nav-burger" id="navBurger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -35,43 +34,22 @@
     <a href="index.html#about" class="nm-link">About</a>
     <a href="index.html#skills" class="nm-link">Skills</a>
     <a href="projects.html" class="nm-link">Work</a>
-    <a href="index.html#process" class="nm-link">Process</a>
+
     <a href="index.html#contact" class="nm-link">Contact</a>
   </div>
 
-  <!-- ─── PROJECTS HERO ─── -->
-  <section id="proj-hero">
-    <div class="ph-bg-grid"></div>
-    <div class="ph-glow"></div>
-    <div class="ph-content">
-      <div class="stag ph-stag" id="phTag">Selected Work</div>
-      <h1 class="ph-title" id="phTitle">
-        <span class="ph-line"><span class="ph-inner">Every project</span></span>
-        <span class="ph-line"><span class="ph-inner ph-accent">tells a story.</span></span>
-      </h1>
-      <p class="ph-sub" id="phSub">Real clients, real results — from concept to launch.<br>Here's what I've built.</p>
-      <div class="ph-meta" id="phMeta">
-        <div class="ph-meta-item">
-          <span class="ph-meta-num" id="projCount">0</span>
-          <span class="ph-meta-label">Projects</span>
-        </div>
-        <div class="ph-meta-div"></div>
-        <div class="ph-meta-item">
-          <span class="ph-meta-num">3+</span>
-          <span class="ph-meta-label">Years</span>
-        </div>
-        <div class="ph-meta-div"></div>
-        <div class="ph-meta-item">
-          <span class="ph-meta-num">5★</span>
-          <span class="ph-meta-label">Reviews</span>
-        </div>
+  <!-- ─── MINIMAL PAGE HEADER ─── -->
+  <div class="pg-page-header">
+    <div class="pg-page-header-inner">
+      <h1 class="pg-page-title">Work</h1>
+      <div class="pg-page-meta">
+        <span class="pg-page-count" id="pgTotalCount"></span>
+        <span class="pg-page-meta-sep"></span>
+        <span class="pg-page-year">2022 — 2025</span>
       </div>
     </div>
-    <div class="ph-scroll-hint" id="phScroll">
-      <span class="scroll-lbl">Scroll</span>
-      <div class="scroll-bar"></div>
-    </div>
-  </section>
+    <div class="pg-page-border"></div>
+  </div>
 
   <!-- ─── PROJECTS GRID ─── -->
   <section id="proj-grid-sec">
@@ -80,9 +58,12 @@
         <!-- cards injected by JS -->
       </div>
       <div class="pg-load-wrap" id="pgLoadWrap">
+        <div class="pg-progress" id="pgProgress">
+          <div class="pg-progress-bar" id="pgProgressBar"></div>
+        </div>
+        <div class="pg-progress-label" id="pgProgressLabel"></div>
         <button class="pg-load-btn" id="pgLoadBtn">
           <span class="pg-load-text">Load More</span>
-          <span class="pg-load-count" id="pgLoadCount"></span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
         </button>
       </div>
@@ -94,7 +75,7 @@
 
   <!-- ─── FOOTER (same as index) ─── -->
   <footer id="contact">
-    <div class="foot-inner wrap">
+    <div class="foot-inner">
 
       <div class="foot-brand-col">
         <div class="foot-logo">OV.</div>
@@ -152,9 +133,9 @@
     </div>
   </footer>
 
-  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script/transition.js"></script>
   <script src="script/projects-data.js"></script>
   <script src="script/projects.js"></script>
 

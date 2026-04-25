@@ -20,7 +20,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="projects.html" class="nav-active">Work</a></li>
-        <li><a href="index.html#process">Process</a></li>
+  
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="nav-pill"><span class="pulse"></span>Available for Projects</div>
@@ -34,13 +34,11 @@
     <a href="index.html#about" class="nm-link">About</a>
     <a href="index.html#skills" class="nm-link">Skills</a>
     <a href="projects.html" class="nm-link">Work</a>
-    <a href="index.html#process" class="nm-link">Process</a>
+
     <a href="index.html#contact" class="nm-link">Contact</a>
   </div>
 
   <!-- Page enter overlay (slides away on load) -->
-  <div class="pd-enter" id="pdEnter"></div>
-
   <!-- ─── 404 state (shown if id not found) ─── -->
   <div class="pd-404" id="pd404" style="display:none;">
     <div class="pd-404-inner">
@@ -87,8 +85,8 @@
     <!-- GALLERY -->
     <section class="pd-gallery-section" id="pdGallerySection" style="display:none;">
       <div class="pd-gallery-header wrap">
-        <div class="stag">Gallery</div>
-        <h2 class="pd-gallery-title">Project Visuals</h2>
+        <h2 class="pd-gallery-title">Gallery</h2>
+        <span class="pd-gallery-count-label" id="pdGalleryCountLabel"></span>
       </div>
       <div class="pd-gallery-grid" id="pdGalleryGrid"></div>
     </section>
@@ -115,7 +113,7 @@
 
   <!-- FOOTER -->
   <footer id="contact">
-    <div class="foot-inner wrap">
+    <div class="foot-inner">
       <div class="foot-brand-col">
         <div class="foot-logo">OV.</div>
         <p class="foot-tagline">Front-End Developer. Clean code, real results, every time.</p>
@@ -159,9 +157,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- shared data -->
+  <script src="script/transition.js"></script>
   <script src="script/projects-data.js"></script>
-  <!-- detail page logic -->
   <script src="script/project-detail.js"></script>
 
 </body>

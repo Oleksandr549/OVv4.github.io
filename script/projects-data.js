@@ -28,13 +28,18 @@ const PROJECTS = [
     id: 1,
     title: "VR Lounge",
     type: "Landing",
-    stack: ["HTML", "CSS", "JavaScript", "GSAP"],
+    stack: ["HTML", "CSS", "JavaScript", "GSAP", "HTML", "CSS", "JavaScript", "GSAP"],
     year: "2024",
     country: "🇺🇸 United States",
     client: "Entertainment · VR Club",
     platform: "Fiverr",
     image: "images/VRLounge.png",
     gallery: [
+      { type: "image", src: "images/VRLounge.png" },
+      { type: "image", src: "images/NationsOnFire.png" },
+      { type: "image", src: "images/DreamApart.png" },
+      { type: "image", src: "images/QBL.png" },
+      { type: "image", src: "images/VRLounge.png" },
       { type: "image", src: "images/VRLounge.png" },
       { type: "image", src: "images/NationsOnFire.png" },
       { type: "image", src: "images/DreamApart.png" },
@@ -69,7 +74,11 @@ const PROJECTS = [
       "Multi-page platform architecture",
       "PHP backend with user registration and login",
       "Dynamic leaderboard and match history sections",
-      "Fully responsive across all devices"
+      "Fully responsive across all devices",
+      "Fully responsive across all devices",
+      "Fully responsive across all devices",
+      "Fully responsive across all devices",
+      "Fully responsive across all devices",
     ],
     liveUrl: "#"
   },
@@ -94,6 +103,93 @@ const PROJECTS = [
   },
   {
     id: 4,
+    title: "QBL Platform",
+    type: "Web App",
+    stack: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
+    year: "2024",
+    country: "🇨🇦 Canada",
+    client: "Sports · League Management",
+    platform: "UpWork",
+    image: "images/QBL.png",
+    brief: "A basketball league needed a full management platform — teams, schedules, standings, and player profiles, all in one place.",
+    deliverables: [
+      "Admin dashboard for league management",
+      "Dynamic standings and schedule system",
+      "Player and team profile pages",
+      "PHP + SQL backend with full CRUD"
+    ],
+    liveUrl: "#"
+  },
+  {
+    id: 5,
+    title: "VR Lounge",
+    type: "Landing",
+    stack: ["HTML", "CSS", "JavaScript", "GSAP"],
+    year: "2024",
+    country: "🇺🇸 United States",
+    client: "Entertainment · VR Club",
+    platform: "Fiverr",
+    image: "images/VRLounge.png",
+    gallery: [
+      { type: "image", src: "images/VRLounge.png" },
+      { type: "image", src: "images/NationsOnFire.png" },
+      { type: "image", src: "images/DreamApart.png" },
+      { type: "image", src: "images/QBL.png" },
+      { type: "image", src: "images/VRLounge.png" },
+    ],
+    brief: "A VR entertainment venue needed a high-impact landing page to drive bookings and showcase their immersive experiences.",
+    deliverables: [
+      "Full-page build from Figma design",
+      "Advanced GSAP scroll animations and entrance effects",
+      "Responsive layout for mobile and tablet",
+      "Custom booking CTA section with hover interactions"
+    ],
+    review: {
+      text: "The page looks stunning. Exactly what we needed — modern, fast, and our customers love it. Delivered ahead of schedule.",
+      author: "Client · USA"
+    },
+    liveUrl: "#"
+  },
+  {
+    id: 6,
+    title: "Nations on Fire",
+    type: "Platform",
+    stack: ["HTML", "CSS", "JavaScript", "PHP"],
+    year: "2024",
+    country: "🇬🇧 United Kingdom",
+    client: "Gaming · Online Platform",
+    platform: "UpWork",
+    image: "images/NationsOnFire.png",
+    brief: "A competitive online gaming platform requiring user authentication, dynamic leaderboards, and real-time match data.",
+    deliverables: [
+      "Multi-page platform architecture",
+      "PHP backend with user registration and login",
+      "Dynamic leaderboard and match history sections",
+      "Fully responsive across all devices"
+    ],
+    liveUrl: "#"
+  },
+  {
+    id: 7,
+    title: "Dream Apart",
+    type: "Business",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2023",
+    country: "🇵🇱 Poland",
+    client: "Real Estate · Apartments",
+    platform: "Dreamer Studio",
+    image: "images/DreamApart.png",
+    brief: "A premium apartment rental service needed a clean, conversion-focused website to attract international tenants.",
+    deliverables: [
+      "Property showcase with image galleries",
+      "Interactive contact and booking form",
+      "Multi-language layout preparation",
+      "SEO-optimized structure and meta setup"
+    ],
+    liveUrl: "#"
+  },
+  {
+    id: 8,
     title: "QBL Platform",
     type: "Web App",
     stack: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
