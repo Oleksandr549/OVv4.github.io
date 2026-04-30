@@ -4,14 +4,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ─── Primary SEO ─── -->
   <title>Oleksandr Vyshnevskyi — Front-End Developer</title>
-  <link
+  <meta name="description" content="Front-end developer with 3+ years and 38+ projects delivered for clients in the US, Canada, and Europe. HTML, CSS, JavaScript, PHP — clean code, on-time delivery, 5.0 Fiverr rating.">
+  <meta name="keywords" content="front-end developer, web developer, freelance developer, HTML CSS JavaScript, Fiverr developer, UpWork developer, landing page, web design, Oleksandr Vyshnevskyi">
+  <meta name="author" content="Oleksandr Vyshnevskyi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://vyshnevsky.com/">
+
+  <!-- ─── Open Graph (Facebook, LinkedIn, Telegram, WhatsApp) ─── -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vyshnevsky.com/">
+  <meta property="og:title" content="Oleksandr Vyshnevskyi — Front-End Developer">
+  <meta property="og:description" content="38+ projects delivered for clients across the US, Canada, and Europe. Clean code, pixel-perfect design, on-time delivery. 5.0 rating on Fiverr.">
+  <meta property="og:image" content="https://vyshnevsky.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Oleksandr Vyshnevskyi — Front-End Developer">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Oleksandr Vyshnevskyi">
+
+  <!-- ─── Twitter Card ─── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://vyshnevsky.com/">
+  <meta name="twitter:title" content="Oleksandr Vyshnevskyi — Front-End Developer">
+  <meta name="twitter:description" content="38+ projects delivered for clients across the US, Canada, and Europe. Clean code, pixel-perfect design, on-time delivery.">
+  <meta name="twitter:image" content="https://vyshnevsky.com/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Oleksandr Vyshnevskyi — Front-End Developer">
+
+  <!-- ─── Favicon ─── -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- ─── JSON-LD Structured Data ─── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Oleksandr Vyshnevskyi",
+    "jobTitle": "Front-End Developer",
+    "url": "https://vyshnevsky.com",
+    "email": "oleksandr.vyshnevskyi.work@gmail.com",
+    "description": "Front-end developer with 3+ years of experience and 38+ projects delivered for clients in the US, Canada, and Europe.",
+    "sameAs": [
+      "https://linkedin.com/in/oleksandr-vyshnevskyi-71875734a",
+      "https://github.com/oleksandr549"
+    ],
+    "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "UI/UX Design", "Figma", "Responsive Design"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    }
+  }
+  </script>
+
+  <!-- ─── Fonts & Styles ─── -->
+  <!-- Preconnect to font origins for faster DNS + TLS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Non-blocking font load -->
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+  </noscript>
   <link rel="stylesheet" href="styles/style.css">
+  <!-- Preload GSAP (critical for hero animation) -->
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
 </head>
 
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- NAV -->
   <nav id="nav">
@@ -20,7 +88,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Work</a></li>
+        <li><a href="projects.html">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-pill"><span class="pulse"></span>Available for Projects</div>
@@ -34,7 +102,7 @@
   <div class="nav-mobile" id="navMobile">
     <a href="#about" class="nm-link">About</a>
     <a href="#skills" class="nm-link">Skills</a>
-    <a href="#projects" class="nm-link">Work</a>
+    <a href="projects.html" class="nm-link">Work</a>
     <a href="#contact" class="nm-link">Contact</a>
     
   </div>
@@ -50,14 +118,13 @@
         <span class="line"><span class="inner" id="heroL1">Oleksandr</span></span>
         <span class="line"><span class="inner accent" id="heroL2">Vyshnevskyi</span></span>
       </div>
-      <p class="hero-sub" id="heroSub">I turn ideas into websites that work — fast to load, easy to navigate, and built
-        to leave an impression.</p>
+      <p class="hero-sub" id="heroSub">I build websites that win clients, rank on Google, and launch on time — for businesses that can't afford average.</p>
       <div class="hero-btns" id="heroBtns">
         <a href="#projects" class="btn-g">See My Work ↓</a>
         <a href="#contact" class="btn-o">Let's Talk →</a>
       </div>
     </div>
-    <div class="fi-wrap" id="fiWrap"></div>
+    <div class="fi-wrap" id="fiWrap" aria-hidden="true"></div>
     <div class="hero-scroll-hint" id="heroScroll">
       <span class="scroll-lbl">Scroll</span>
       <div class="scroll-bar"></div>
@@ -65,7 +132,7 @@
   </section>
 
   <!-- MARQUEE -->
-  <div class="mq" style="position:relative;z-index:2">
+  <div class="mq" style="position:relative;z-index:2" aria-hidden="true">
     <div class="mq-t">
       <span class="mq-i">HTML5 <span class="mq-sep">✦</span></span>
       <span class="mq-i">CSS3 <span class="mq-sep">✦</span></span>
@@ -97,13 +164,9 @@
         <div class="stag gsap-fade">About Me</div>
         <h2 class="sh gsap-splitlines">Front-end developer<br>who ships on time and gets it right.</h2>
         <div class="about-desc gsap-fade">
-          <p>I've been building websites for clients across the <strong>US, Canada, and Europe</strong> since 2022 —
-            landing pages, multi-page platforms, animated builds, custom calculators and forms. Projects of any scale.
-          </p>
-          <p>I write the code and handle the design. You get <strong>one person who understands both sides</strong> —
-            and takes full responsibility for the result.</p>
-          <p>Every project gets the same attention. Whether it's a one-pager or a full product, I treat it like it's my
-            own business on the line.</p>
+          <p>Since 2022 I've shipped <strong>38+ projects</strong> for clients across the US, Canada, and Europe — landing pages, multi-page platforms, e-commerce builds, and custom web apps. Every project delivered on time.</p>
+          <p>I handle both design and development. That means <strong>no miscommunication between designer and developer</strong> — one person owns the result from Figma to live site.</p>
+          <p>Whether you need a landing page in 3 days or a full platform in 3 weeks — I treat your project like my own reputation is on the line. Because it is.</p>
         </div>
         <div class="divider"></div>
         <div class="exp-item gsap-fade">
@@ -140,7 +203,7 @@
       <div class="about-r gsap-fade">
         <div class="about-photo-wrap" id="aboutPhotoWrap">
           <div class="about-photo-bg"></div>
-          <img id="aboutPhoto" src="images/test.png" alt="Oleksandr Vyshnevskyi">
+          <img id="aboutPhoto" src="images/test.png" alt="Oleksandr Vyshnevskyi" fetchpriority="high">
           <div class="about-photo-overlay"></div>
         </div>
 
@@ -167,12 +230,11 @@
           <svg class="sk-border-svg" id="sksvg0">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/html.png" alt="">
+          <img class="sk-ghost" src="images/html.png" alt="" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Core · Front-End</span><span class="sk-num">01</span></div>
             <div class="sk-name">HTML & CSS</div>
-            <div class="sk-desc">My core strength. From simple layouts to complex animations and pixel-perfect
-              responsive builds — this is where quality shows.</div>
+            <div class="sk-desc">Pixel-perfect layouts, smooth animations, fully responsive builds. The foundation that makes a site look professional and load fast on any device.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span><span class="sk-tag">SCSS</span><span
                   class="sk-tag">Animations</span></div>
@@ -185,11 +247,11 @@
           <svg class="sk-border-svg" id="sksvg1">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/js.png" alt="">
+          <img class="sk-ghost" src="images/js.png" alt="" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Interactivity</span><span class="sk-num">02</span></div>
             <div class="sk-name">JavaScript</div>
-            <div class="sk-desc">DOM, async logic, API calls — interfaces that feel alive.</div>
+            <div class="sk-desc">Animations, interactive menus, live search, forms with validation — everything that makes a site feel modern and responsive to the user.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">ES6+</span><span class="sk-tag">DOM</span><span
                   class="sk-tag">Fetch</span></div>
@@ -205,11 +267,11 @@
           <svg class="sk-border-svg" id="sksvg3">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/php.png" alt="PHP">
+          <img class="sk-ghost" src="images/php.png" alt="PHP" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Back-End</span><span class="sk-num">03</span></div>
             <div class="sk-name">PHP & Python</div>
-            <div class="sk-desc">Server-side logic, forms, database integration — full web experiences.</div>
+            <div class="sk-desc">Contact forms that actually send, user logins, database-driven content — the backend that makes your site do more than look good.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">PHP</span><span class="sk-tag">Python</span><span
                   class="sk-tag">REST APIs</span></div>
@@ -221,11 +283,11 @@
           <svg class="sk-border-svg" id="sksvg2">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/figma.png" alt="Figma">
+          <img class="sk-ghost" src="images/figma.png" alt="Figma" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Design</span><span class="sk-num">04</span></div>
             <div class="sk-name">UI/UX & Figma</div>
-            <div class="sk-desc">Figma to code, or scratch — something intentional, not a template.</div>
+            <div class="sk-desc">I build from your Figma file or design from scratch. Either way you get something that looks intentional — not like a template everyone else is using.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">Figma</span><span class="sk-tag">Prototyping</span><span
                   class="sk-tag">UI Systems</span></div>
@@ -237,11 +299,11 @@
           <svg class="sk-border-svg" id="sksvg4">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/git.png" alt="GitHub">
+          <img class="sk-ghost" src="images/git.png" alt="GitHub" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Tools</span><span class="sk-num">05</span></div>
             <div class="sk-name">GitHub</div>
-            <div class="sk-desc">Clean commits, branching, collaboration — every project tracked from day one.</div>
+            <div class="sk-desc">Every project is version-controlled from day one. You always have access to the code, history is clean, and nothing ever gets lost.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">Git</span><span class="sk-tag">GitHub</span><span
                   class="sk-tag">CLI</span></div>
@@ -255,12 +317,11 @@
           <svg class="sk-border-svg" id="sksvg5">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/db.png" alt="Database">
+          <img class="sk-ghost" src="images/db.png" alt="Database" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Databases</span><span class="sk-num">06</span></div>
             <div class="sk-name">Microsoft SQL</div>
-            <div class="sk-desc">Structuring, querying and managing relational databases. Solid data foundations for
-              dynamic apps.</div>
+            <div class="sk-desc">Structured databases for products, portfolios, booking systems and more — data that's fast to query and easy to maintain as your project grows.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">SQL</span><span class="sk-tag">Queries</span><span
                   class="sk-tag">Schema</span></div>
@@ -273,12 +334,11 @@
           <svg class="sk-border-svg" id="sksvg6">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/devise.png" alt="Devise">
+          <img class="sk-ghost" src="images/devise.png" alt="Devise" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Approach</span><span class="sk-num">07</span></div>
             <div class="sk-name">Responsive Design</div>
-            <div class="sk-desc">Mobile-first, fluid layouts that adapt seamlessly to any screen — phone, tablet or wide
-              desktop.</div>
+            <div class="sk-desc">Your site works perfectly on every screen — phone, tablet, laptop, wide monitor. No pinching, no broken layouts, no compromises.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">Mobile-first</span><span class="sk-tag">Cross-browser</span>
               </div>
@@ -292,12 +352,11 @@
           <svg class="sk-border-svg" id="sksvg7">
             <rect class="sk-border-path" x="1" y="1" width="99%" height="97%" rx="17" />
           </svg>
-          <img class="sk-ghost" src="images/chat.png" alt="Communication">
+          <img class="sk-ghost" src="images/chat.png" alt="Communication" loading="lazy">
           <div class="sk-body">
             <div class="sk-head"><span class="sk-cat">Soft Skills</span><span class="sk-num">08</span></div>
             <div class="sk-name">Communication</div>
-            <div class="sk-desc">Clear briefs, honest timelines, zero ghosting. Always reachable, and you always know
-              where your project stands.</div>
+            <div class="sk-desc">You know where your project is at all times. I respond fast, flag issues early, and never disappear mid-project. No surprises at the finish line.</div>
             <div class="sk-foot">
               <div class="sk-tags"><span class="sk-tag">Freelance</span><span class="sk-tag">PM</span><span
                   class="sk-tag">Delivery</span></div>
@@ -323,86 +382,81 @@
     <div class="proj-scroll-wrap" id="projScrollWrap">
       <div class="proj-sticky" id="projSticky">
         <div class="proj-track" id="projTrack">
-    <a href="https://oleksandr549.github.io/QBL.github.io/" target="_blank" class="proj-slide featured">
-            <div class="proj-thumb" style="background:linear-gradient(135deg,#040a0a,#081515)">
+    <a href="project-detail.html?id=4" class="proj-slide featured">
+            <div class="proj-thumb" style="background:#040a0a">
               <div class="proj-thumb-inner">
-                <img src="images/QBL.png" alt="QBL" 
-         style="width:100%;height:100%;object-fit:cover;display:block">
+                <img src="images/QBL.png" alt="QBL" loading="lazy" width="1920" height="1080" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
+              </div>
+              <span class="proj-badge">Web App</span>
+              <span class="proj-card-num">01</span>
+              <div class="proj-hover-panel">
+                <div class="proj-hover-title">QBL Platform</div>
+                <div class="proj-hover-stack">
+                  <span class="proj-hover-tag">HTML</span>
+                  <span class="proj-hover-tag">CSS</span>
+                  <span class="proj-hover-tag">JavaScript</span>
+                  <span class="proj-hover-tag">PHP</span>
+                </div>
+                <div class="proj-hover-cta">View Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+              </div>
+            </div>
+          </a>
+
+          <a href="project-detail.html?id=3" class="proj-slide featured">
+            <div class="proj-thumb" style="background:#060e08">
+              <div class="proj-thumb-inner">
+                <img src="images/DreamApart.png" alt="DreamApart" loading="lazy" width="1920" height="1080" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
               </div>
               <span class="proj-badge">Business</span>
-              <div class="proj-ext">↗</div>
-            </div>
-            <div class="proj-info">
-              <div class="proj-tag">Business · Landing</div>
-              <div class="proj-title">QBL</div>
-              <div class="proj-desc">Professional business landing page with structured layout and clear calls to
-                action.</div>
-              <div class="proj-foot">
-                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                <div class="proj-arrow">Live →</div>
+              <span class="proj-card-num">02</span>
+              <div class="proj-hover-panel">
+                <div class="proj-hover-title">Dream Apart</div>
+                <div class="proj-hover-stack">
+                  <span class="proj-hover-tag">HTML</span>
+                  <span class="proj-hover-tag">CSS</span>
+                  <span class="proj-hover-tag">JavaScript</span>
+                </div>
+                <div class="proj-hover-cta">View Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               </div>
             </div>
           </a>
-          
 
-          <a href="https://oleksandr549.github.io/DreamApart/" target="_blank" class="proj-slide">
-            <div class="proj-thumb" style="background:linear-gradient(135deg,#060e08,#0c1c10)">
+          <a href="project-detail.html?id=1" class="proj-slide featured">
+            <div class="proj-thumb" style="background:#050510">
               <div class="proj-thumb-inner">
-                <img src="images/DreamApart.png" alt="DreamApart" 
-         style="width:100%;height:100%;object-fit:cover;display:block">
-              
+                <img src="images/VRLounge.png" alt="VR Lounge" loading="lazy" width="1920" height="1080" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
               </div>
-              <span class="proj-badge">Real Estate</span>
-              <div class="proj-ext">↗</div>
-            </div>
-            <div class="proj-info">
-              <div class="proj-tag">Real Estate · UI</div>
-              <div class="proj-title">DreamApart</div>
-              <div class="proj-desc">Elegant real estate platform with property listings, clean UI and smooth user
-                experience throughout.</div>
-              <div class="proj-foot">
-                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                <div class="proj-arrow">Live →</div>
+              <span class="proj-badge">Landing</span>
+              <span class="proj-card-num">03</span>
+              <div class="proj-hover-panel">
+                <div class="proj-hover-title">VR Lounge</div>
+                <div class="proj-hover-stack">
+                  <span class="proj-hover-tag">HTML</span>
+                  <span class="proj-hover-tag">CSS</span>
+                  <span class="proj-hover-tag">JavaScript</span>
+                  <span class="proj-hover-tag">GSAP</span>
+                </div>
+                <div class="proj-hover-cta">View Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               </div>
             </div>
           </a>
-<a href="https://oleksandr549.github.io/VRLounge2.github.io/" target="_blank" class="proj-slide ">
-            <div class="proj-thumb" style="background:linear-gradient(135deg,#050510,#0d0820)">
+
+          <a href="project-detail.html?id=2" class="proj-slide featured">
+            <div class="proj-thumb" style="background:#0f0400">
               <div class="proj-thumb-inner">
-                <img src="images/VRLounge.png" alt="VR Lounge" 
-         style="width:100%;height:100%;object-fit:cover;display:block">
+                <img src="images/NationsOnFire.png" alt="Nations On Fire" loading="lazy" width="1920" height="1440" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
               </div>
-              <span class="proj-badge">Featured</span>
-              <div class="proj-ext">↗</div>
-            </div>
-            <div class="proj-info">
-              <div class="proj-tag">Immersive · Experience</div>
-              <div class="proj-title">VR Lounge</div>
-              <div class="proj-desc">Immersive landing page for a VR entertainment venue. Bold visuals, animated
-                sections and UI that pulls you in before you even put on the headset.</div>
-              <div class="proj-foot">
-                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                <div class="proj-arrow">Live →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://oleksandr549.github.io/Nations-On-Fire-git.io/" target="_blank" class="proj-slide">
-            <div class="proj-thumb" style="background:linear-gradient(135deg,#0f0400,#1e0800)">
-              <div class="proj-thumb-inner">
-                   <img src="images/NationsOnFire.png" alt="Nations On Fire" 
-         style="width:100%;height:100%;object-fit:cover;display:block">
-              </div>
-              <span class="proj-badge">Creative</span>
-              <div class="proj-ext">↗</div>
-            </div>
-            <div class="proj-info">
-              <div class="proj-tag">Creative · Bold</div>
-              <div class="proj-title">Nations On Fire</div>
-              <div class="proj-desc">Bold expressive website with strong visual identity and energetic design direction.
-              </div>
-              <div class="proj-foot">
-                <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                <div class="proj-arrow">Live →</div>
+              <span class="proj-badge">Platform</span>
+              <span class="proj-card-num">04</span>
+              <div class="proj-hover-panel">
+                <div class="proj-hover-title">Nations on Fire</div>
+                <div class="proj-hover-stack">
+                  <span class="proj-hover-tag">HTML</span>
+                  <span class="proj-hover-tag">CSS</span>
+                  <span class="proj-hover-tag">JavaScript</span>
+                  <span class="proj-hover-tag">PHP</span>
+                </div>
+                <div class="proj-hover-cta">View Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               </div>
             </div>
           </a>
@@ -427,7 +481,7 @@
     <div id="projReveal">
       <canvas class="reveal-canvas" id="revealCanvas"></canvas>
       <div class="reveal-label" id="revealLabel">More work on GitHub</div>
-      <a href="projects.html" target="_blank" class="reveal-btn" id="revealBtn">
+      <a href="https://github.com/oleksandr549" target="_blank" class="reveal-btn" id="revealBtn">
         View All Work
         <span class="rb-arrow">↗</span>
       </a>
@@ -438,10 +492,9 @@
   <div id="wow3">
     <div class="wow3-orb1"></div>
     <div class="wow3-orb2"></div>
-    <span class="wow3-eye gsap-fade">My approach</span>
-    <h2 class="wow3-h gsap-splitlines">Good websites don't<br>happen by <span class="glow">accident.</span></h2>
-    <p class="wow3-sub gsap-fade">I don't do "good enough." Every project — regardless of size or budget — gets proper
-      structure, clean code, and a design that holds up.</p>
+    <span class="wow3-eye gsap-fade">Ready to build?</span>
+    <h2 class="wow3-h gsap-splitlines">Your next project<br>starts with a <span class="glow">message.</span></h2>
+    <p class="wow3-sub gsap-fade">I have a limited number of slots each month. If you have a project in mind — now is the right time to reach out.</p>
     <a href="#contact" class="btn-g gsap-fade" style="margin:0 auto;display:inline-flex">Start a Project →</a>
     <div class="stats-strip gsap-stagger">
       <div class="stat-col">
@@ -544,11 +597,11 @@
         <div class="review-card" data-col="2">
           <div class="review-stars">★★★★★</div>
           <p class="review-text">"Excellent work and good communication, <strong>professional approach</strong> to
-            project. Looking forward to work in future projects!"</p>
+            project. Looking forward to working on future projects!"</p>
           <div class="review-footer">
             <div class="review-avatar">SP</div>
             <div>
-              <div class="review-name">Sellw P.</div>
+              <div class="review-name">Selw P.</div>
               <div class="review-meta">Poland · Custom Website · 9 days</div>
             </div>
             <div class="review-platform">Fiverr</div>
@@ -566,8 +619,7 @@
         <div class="contact-l">
           <div class="stag gsap-fade">Contact</div>
           <h2 class="sh gsap-splitlines">Ready when<br>you are.</h2>
-          <p class="gsap-fade" style="margin-top:1.5rem">Whether it's a quick question or a full project brief — send a
-            message. I respond within 24 hours and keep the process straightforward from day one.</p>
+          <p class="gsap-fade" style="margin-top:1.5rem">Tell me about your project — what you need, your timeline, and your budget. I'll get back within 24 hours with a clear plan and next steps.</p>
           <a href="mailto:oleksandr.vyshnevskyi.work@gmail.com"
             class="c-email gsap-fade">oleksandr.vyshnevskyi.work@gmail.com</a>
          
@@ -634,8 +686,7 @@
         <ul class="foot-links">
           <li><a href="#about">About Me</a></li>
           <li><a href="#skills">Skills &amp; Stack</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#process">Process</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -746,11 +797,11 @@
   </footer>
 
   <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
-  <script src="script/transition.js"></script>
-  <script src="script/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js" defer></script>
+  <script src="script/transition.js" defer></script>
+  <script src="script/script.js" defer></script>
 
 </body>
 

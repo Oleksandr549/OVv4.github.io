@@ -6,9 +6,19 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* ─── SCROLL PROGRESS BAR ─── */
+(function () {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
 /* ─── Nav scroll ─── */
 window.addEventListener('scroll', () =>
-  document.getElementById('nav').classList.toggle('s', scrollY > 60)
+  document.getElementById('nav').classList.toggle('s', window.scrollY > 60)
 );
 
 /* ─── Mobile nav ─── */
@@ -38,7 +48,13 @@ if (!project) {
   document.getElementById('pd404').style.display = 'flex';
   document.getElementById('pdMain').style.display = 'none';
 } else {
-  renderPage(project);
+  try {
+    renderPage(project);
+  } catch (err) {
+    console.error('[project-detail] renderPage failed:', err);
+    document.getElementById('pd404').style.display = 'flex';
+    document.getElementById('pdMain').style.display = 'none';
+  }
 }
 
 /* ═══════════════════════════════════════════════
@@ -69,19 +85,30 @@ function renderPage(p) {
     document.getElementById('pdHeroBrief').style.display = 'none';
   }
 
-  /* ── INFO STRIP — hidden, replaced by sidebar ── */
-  document.getElementById('pdStrip').style.display = 'none';
+  /* ── Hero actions ── */
+  const heroActions = document.getElementById('pdHeroActions');
+  let actionsHtml = '';
+  if (p.liveUrl && p.liveUrl !== '#') {
+    actionsHtml += `
+      <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="pd-hero-btn primary">
+        Visit Live Site
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>`;
+  }
+  actionsHtml += `
+    <a href="index.html#contact" class="pd-hero-btn ghost">
+      Start a Similar Project →
+    </a>`;
+  heroActions.innerHTML = actionsHtml;
+
+  /* ── INFO STRIP — removed, content moved to sidebar ── */
 
   /* ── LEFT COLUMN ── */
   const left = document.getElementById('pdLeft');
   let leftHtml = '';
 
-  if (p.brief) {
-    leftHtml += `
-      <div class="pd-section-label">The Brief</div>
-      <p class="pd-brief-text">${p.brief}</p>
-    `;
-  }
+  // Brief is already shown in hero — skip it here to avoid duplication.
+  // Show only deliverables + review in the body.
 
   if (p.deliverables?.length) {
     leftHtml += `<div class="pd-section-label">What I Did</div>`;
@@ -89,7 +116,7 @@ function renderPage(p) {
     p.deliverables.forEach((d, i) => {
       leftHtml += `
         <li class="pd-del-item">
-          <span class="pd-del-num">0${i + 1}</span>
+          <span class="pd-del-num">${String(i + 1).padStart(2, '0')}</span>
           <span class="pd-del-text">${d}</span>
         </li>
       `;
@@ -116,18 +143,8 @@ function renderPage(p) {
   sidebarHtml += `<div class="pd-sidebar-box">
     <div class="pd-sb-head">Actions</div>
     <div class="pd-sb-body">
-      <div class="pd-sb-cta">`;
-
-  if (p.liveUrl && p.liveUrl !== '#') {
-    sidebarHtml += `
-      <a href="${p.liveUrl}" target="_blank" class="pd-sb-btn primary">
-        Visit Live Site
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </a>`;
-  }
-
-  sidebarHtml += `
-        <a href="index.html#contact" class="pd-sb-btn secondary">Start a Project →</a>
+      <div class="pd-sb-cta">
+        <a href="index.html#contact" class="pd-sb-btn primary">Start a Similar Project →</a>
         <a href="projects.html" class="pd-sb-btn secondary">← All Projects</a>
       </div>
     </div>
@@ -255,14 +272,34 @@ function renderPage(p) {
   const main = document.getElementById('pdMain');
   main.style.opacity = '1';
 
+  /* ── prefers-reduced-motion check ── */
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── set initial gsap states BEFORE the timeout so elements are hidden from frame 0 ── */
+  if (!prefersReduced) {
+    gsap.set('.pd-breadcrumb', { opacity: 0, y: 10 });
+    gsap.set('.pd-hero-meta',  { opacity: 0, y: 10 });
+    gsap.set('.pd-hero-title', { opacity: 0, y: 20 });
+    gsap.set('.pd-hero-brief', { opacity: 0, y: 16 });
+    gsap.set('.pd-hero-actions', { opacity: 0, y: 14 });
+    gsap.set('#pdLeft',        { opacity: 0, y: 30 });
+    gsap.set('#pdSidebar',     { opacity: 0, y: 20 });
+    gsap.set('#pdNavProjects', { opacity: 0 });
+    gsap.set('.pd-del-item',   { opacity: 0, x: -10 });
+    gsap.set('.pd-review',     { opacity: 0 });
+  }
+
   // Staggered entrance after page-enter overlay finishes (~650ms)
   setTimeout(() => {
+    if (prefersReduced) return; // skip all animations if user prefers reduced motion
+
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     tl.to('.pd-breadcrumb', { opacity: 1, y: 0, duration: .6 }, 0)
       .to('.pd-hero-meta',  { opacity: 1, y: 0, duration: .6 }, .1)
       .to('.pd-hero-title', { opacity: 1, y: 0, duration: .8 }, .2)
-      .to('.pd-hero-brief', { opacity: 1, y: 0, duration: .7 }, .4);
+      .to('.pd-hero-brief', { opacity: 1, y: 0, duration: .7 }, .4)
+      .to('.pd-hero-actions', { opacity: 1, y: 0, duration: .7 }, .55);
 
     // Strip
     gsap.to('#pdStrip', { opacity: 1, duration: .7, delay: .5 });
@@ -298,14 +335,7 @@ function renderPage(p) {
 
   }, 650);
 
-  /* ── set initial gsap states ── */
-  gsap.set('.pd-breadcrumb', { y: 10 });
-  gsap.set('.pd-hero-meta',  { y: 10 });
-  gsap.set('.pd-hero-title', { y: 20 });
-  gsap.set('.pd-hero-brief', { y: 16 });
-  gsap.set('#pdLeft',        { y: 30 });
-  gsap.set('#pdSidebar',     { y: 20 });
-}
+} // end renderPage
 
 /* ═══════════════════════════════════════════════
    LIGHTBOX
@@ -337,7 +367,7 @@ function renderLb() {
   if (!m) return;
   document.getElementById('pdLbMedia').innerHTML = m.type === 'video'
     ? `<video src="${m.src}" controls autoplay></video>`
-    : `<img src="${m.src}" alt="Preview">`;
+    : `<img src="${m.src}" alt="Preview" loading="eager">`;
   document.getElementById('pdLbCounter').textContent = `${lbIdx + 1} / ${lbMedia.length}`;
 }
 

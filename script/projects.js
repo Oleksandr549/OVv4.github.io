@@ -7,6 +7,16 @@ const PER_PAGE = 6;
 /* ─── STATE ─── */
 let shown = 0;
 
+/* ─── SCROLL PROGRESS BAR ─── */
+(function () {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
 /* ─── NAV SCROLL ─── */
 window.addEventListener('scroll', () =>
   document.getElementById('nav').classList.toggle('s', scrollY > 60)
@@ -92,7 +102,16 @@ function buildCard(p, idx) {
     </div>
   `;
 
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-label', `View project: ${p.title}`);
   card.addEventListener('click', () => navigateToProject(p.id));
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      navigateToProject(p.id);
+    }
+  });
   return card;
 }
 

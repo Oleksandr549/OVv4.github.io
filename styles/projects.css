@@ -261,6 +261,12 @@
   transform: translateX(5px);
 }
 
+/* keyboard focus */
+.pg-card:focus-visible {
+  outline: 2px solid var(--g);
+  outline-offset: -2px;
+}
+
 /* ─── LOAD MORE ─── */
 .pg-load-wrap {
   display: flex;

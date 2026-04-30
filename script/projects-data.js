@@ -24,189 +24,424 @@
    ═══════════════════════════════════════════════════════════════ */
 
 const PROJECTS = [
+
   {
     id: 1,
-    title: "VR Lounge",
-    type: "Landing",
-    stack: ["HTML", "CSS", "JavaScript", "GSAP", "HTML", "CSS", "JavaScript", "GSAP"],
-    year: "2024",
-    country: "🇺🇸 United States",
-    client: "Entertainment · VR Club",
-    platform: "Fiverr",
-    image: "images/VRLounge.png",
+    title: "Digital Journalism & CSA",
+    type: "Editorial / Interactive Article",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🇪🇺 Europe",
+    client: "Academic Project · Journalism",
+    platform: "Personal",
+    image: "images/SexualAssault.png",
     gallery: [
-      { type: "image", src: "images/VRLounge.png" },
-      { type: "image", src: "images/NationsOnFire.png" },
-      { type: "image", src: "images/DreamApart.png" },
-      { type: "image", src: "images/QBL.png" },
-      { type: "image", src: "images/VRLounge.png" },
-      { type: "image", src: "images/VRLounge.png" },
-      { type: "image", src: "images/NationsOnFire.png" },
-      { type: "image", src: "images/DreamApart.png" },
-      { type: "image", src: "images/QBL.png" },
-      { type: "image", src: "images/VRLounge.png" },
+        { type: "image", src: "images/SexualAssault2.png" },
+      { type: "image", src: "images/SexualAssault1.png" },
+    
+      { type: "image", src: "images/SexualAssault3.png" },
+      { type: "image", src: "images/SexualAssault4.png" } 
     ],
-    brief: "A VR entertainment venue needed a high-impact landing page to drive bookings and showcase their immersive experiences.",
+    brief: "A long-form digital journalism project focused on sensitive storytelling, combining structured content, readability, and ethical UX.",
     deliverables: [
-      "Full-page build from Figma design",
-      "Advanced GSAP scroll animations and entrance effects",
-      "Responsive layout for mobile and tablet",
-      "Custom booking CTA section with hover interactions"
+      "Long-form editorial layout",
+      "Structured storytelling UX",
+      "Responsive typography system",
+      "Clean content hierarchy"
     ],
     review: {
-      text: "The page looks stunning. Exactly what we needed — modern, fast, and our customers love it. Delivered ahead of schedule.",
-      author: "Client · USA"
+      text: "A powerful and well-structured digital experience. The content is presented clearly and professionally.",
+      author: "Academic Reviewer"
     },
-    liveUrl: "#"
+    liveUrl: "https://oleksandr549.github.io/SexualAssault.github.io/"
   },
+
   {
     id: 2,
-    title: "Nations on Fire",
-    type: "Platform",
-    stack: ["HTML", "CSS", "JavaScript", "PHP"],
-    year: "2024",
-    country: "🇬🇧 United Kingdom",
-    client: "Gaming · Online Platform",
-    platform: "UpWork",
-    image: "images/NationsOnFire.png",
-    brief: "A competitive online gaming platform requiring user authentication, dynamic leaderboards, and real-time match data.",
-    deliverables: [
-      "Multi-page platform architecture",
-      "PHP backend with user registration and login",
-      "Dynamic leaderboard and match history sections",
-      "Fully responsive across all devices",
-      "Fully responsive across all devices",
-      "Fully responsive across all devices",
-      "Fully responsive across all devices",
-      "Fully responsive across all devices",
-    ],
-    liveUrl: "#"
-  },
-  {
-    id: 3,
-    title: "Dream Apart",
-    type: "Business",
+    title: "Levantine Collective",
+    type: "Landing Page",
     stack: ["HTML", "CSS", "JavaScript"],
-    year: "2023",
-    country: "🇵🇱 Poland",
-    client: "Real Estate · Apartments",
-    platform: "Dreamer Studio",
-    image: "images/DreamApart.png",
-    brief: "A premium apartment rental service needed a clean, conversion-focused website to attract international tenants.",
-    deliverables: [
-      "Property showcase with image galleries",
-      "Interactive contact and booking form",
-      "Multi-language layout preparation",
-      "SEO-optimized structure and meta setup"
-    ],
-    liveUrl: "#"
-  },
-  {
-    id: 4,
-    title: "QBL Platform",
-    type: "Web App",
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
-    year: "2024",
-    country: "🇨🇦 Canada",
-    client: "Sports · League Management",
-    platform: "UpWork",
-    image: "images/QBL.png",
-    brief: "A basketball league needed a full management platform — teams, schedules, standings, and player profiles, all in one place.",
-    deliverables: [
-      "Admin dashboard for league management",
-      "Dynamic standings and schedule system",
-      "Player and team profile pages",
-      "PHP + SQL backend with full CRUD"
-    ],
-    liveUrl: "#"
-  },
-  {
-    id: 5,
-    title: "VR Lounge",
-    type: "Landing",
-    stack: ["HTML", "CSS", "JavaScript", "GSAP"],
-    year: "2024",
-    country: "🇺🇸 United States",
-    client: "Entertainment · VR Club",
-    platform: "Fiverr",
-    image: "images/VRLounge.png",
+    year: "2025",
+    country: "🌍 Global",
+    client: "Creative Collective",
+    platform: "Personal",
+    image: "images/LevantineCollective.png",
     gallery: [
-      { type: "image", src: "images/VRLounge.png" },
-      { type: "image", src: "images/NationsOnFire.png" },
-      { type: "image", src: "images/DreamApart.png" },
-      { type: "image", src: "images/QBL.png" },
-      { type: "image", src: "images/VRLounge.png" },
+      { type: "image", src: "images/LevantineCollective3.png" },
+      { type: "image", src: "images/LevantineCollective2.png" },
+      { type: "image", src: "images/LevantineCollective1.png" },
+      { type: "image", src: "images/LevantineCollective4.png" },
+  
     ],
-    brief: "A VR entertainment venue needed a high-impact landing page to drive bookings and showcase their immersive experiences.",
+    brief: "A modern landing page for a creative collective with focus on branding, typography, and visual identity.",
     deliverables: [
-      "Full-page build from Figma design",
-      "Advanced GSAP scroll animations and entrance effects",
-      "Responsive layout for mobile and tablet",
-      "Custom booking CTA section with hover interactions"
+      "Brand-focused UI design",
+      "Responsive layout",
+      "Typography-driven design",
+      "Clean section structure"
     ],
     review: {
-      text: "The page looks stunning. Exactly what we needed — modern, fast, and our customers love it. Delivered ahead of schedule.",
-      author: "Client · USA"
+      text: "Elegant and modern design. Strong visual identity and great attention to detail.",
+      author: "Design Feedback"
     },
-    liveUrl: "#"
+    liveUrl: "https://oleksandr549.github.io/LevantineCollective.github.io/"
   },
+
+  {
+    id: 3,
+    title: "Chat UI",
+    type: "Web App",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2024",
+    country: "🌍 Global",
+    client: "Concept UI",
+    platform: "Personal",
+    image: "images/Chat.png",
+    gallery: [{ type: "image", src: "images/Chat.png" }],
+    brief: "A clean and modern messaging interface concept focused on usability and layout clarity.",
+    deliverables: [
+      "Chat interface layout",
+      "Message UI system",
+      "Responsive design",
+      "Minimal UX approach"
+    ],
+    review: {
+      text: "Simple, clean, and very usable interface. Feels like a real product.",
+      author: "UI Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/Chat.github.io/"
+  },
+
+  {
+    id: 4,
+    title: "KAAS Platform",
+    type: "Landing / SaaS",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Startup Concept",
+    platform: "Personal",
+    image: "images/KAAS.png",
+    gallery: [{ type: "image", src: "images/KAAS.png" }],
+    brief: "A SaaS-style landing page presenting a digital product with structured sections and clear messaging.",
+    deliverables: [
+      "SaaS landing structure",
+      "Feature sections UI",
+      "Call-to-action blocks",
+      "Responsive layout"
+    ],
+    review: {
+      text: "Professional SaaS look with clear structure and strong usability.",
+      author: "Product Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/KAAS.github.io/"
+  },
+
+  {
+    id: 5,
+    title: "Nations On Fire",
+    type: "Interactive Landing",
+    stack: ["HTML", "CSS", "JavaScript", "GSAP"],
+    year: "2024",
+    country: "🌍 Global",
+    client: "Awareness Project",
+    platform: "Personal",
+    image: "images/NationsOnFire.png",
+    gallery: [{ type: "image", src: "images/NationsOnFire.png" }],
+    brief: "An animation-driven landing page using scroll-based interactions to create an immersive experience.",
+    deliverables: [
+      "GSAP animations",
+      "Scroll-based storytelling",
+      "Responsive design",
+      "Visual-driven layout"
+    ],
+    review: {
+      text: "Great use of animation. Smooth and engaging experience.",
+      author: "Design Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/Nations-On-Fire-git.io/"
+  },
+
   {
     id: 6,
-    title: "Nations on Fire",
-    type: "Platform",
-    stack: ["HTML", "CSS", "JavaScript", "PHP"],
+    title: "Matrix Experience",
+    type: "Interactive Landing",
+    stack: ["HTML", "CSS", "JavaScript"],
     year: "2024",
-    country: "🇬🇧 United Kingdom",
-    client: "Gaming · Online Platform",
-    platform: "UpWork",
-    image: "images/NationsOnFire.png",
-    brief: "A competitive online gaming platform requiring user authentication, dynamic leaderboards, and real-time match data.",
+    country: "🇵🇱 Poland",
+    client: "Creative Studio",
+    platform: "Web",
+    image: "images/Matrix.png",
+    gallery: [{ type: "image", src: "images/Matrix.png" }],
+    brief: "A visually experimental landing page inspired by digital aesthetics and immersive visuals.",
     deliverables: [
-      "Multi-page platform architecture",
-      "PHP backend with user registration and login",
-      "Dynamic leaderboard and match history sections",
-      "Fully responsive across all devices"
+      "Experimental UI design",
+      "Visual effects",
+      "Responsive layout",
+      "Creative concept implementation"
     ],
-    liveUrl: "#"
+    review: {
+      text: "Unique and visually striking concept. Feels very experimental and modern.",
+      author: "Creative Feedback"
+    },
+    liveUrl: "http://matrix.dreamerstudio.pl/"
   },
+
   {
     id: 7,
-    title: "Dream Apart",
-    type: "Business",
+    title: "QBL Platform",
+    type: "Landing Page",
     stack: ["HTML", "CSS", "JavaScript"],
-    year: "2023",
-    country: "🇵🇱 Poland",
-    client: "Real Estate · Apartments",
-    platform: "Dreamer Studio",
-    image: "images/DreamApart.png",
-    brief: "A premium apartment rental service needed a clean, conversion-focused website to attract international tenants.",
+    year: "2024",
+    country: "🌍 Global",
+    client: "Business Concept",
+    platform: "Personal",
+    image: "images/QBL.png",
+    gallery: [{ type: "image", src: "images/QBL.png" }],
+    brief: "A corporate-style landing page with structured sections and business-oriented UI.",
     deliverables: [
-      "Property showcase with image galleries",
-      "Interactive contact and booking form",
-      "Multi-language layout preparation",
-      "SEO-optimized structure and meta setup"
+      "Business landing UI",
+      "Structured layout",
+      "Responsive design",
+      "Clear content hierarchy"
     ],
-    liveUrl: "#"
+    review: {
+      text: "Clean and professional. Well-structured for business use.",
+      author: "Client Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/QBL.github.io/"
   },
+
   {
     id: 8,
-    title: "QBL Platform",
-    type: "Web App",
-    stack: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
+    title: "Dream Apart",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
     year: "2024",
-    country: "🇨🇦 Canada",
-    client: "Sports · League Management",
-    platform: "UpWork",
-    image: "images/QBL.png",
-    brief: "A basketball league needed a full management platform — teams, schedules, standings, and player profiles, all in one place.",
+    country: "🌍 Global",
+    client: "Creative Project",
+    platform: "Personal",
+    image: "images/DreamApart.png",
+    gallery: [{ type: "image", src: "images/DreamApart.png" }],
+    brief: "A visually soft and aesthetic landing page focused on mood and presentation.",
     deliverables: [
-      "Admin dashboard for league management",
-      "Dynamic standings and schedule system",
-      "Player and team profile pages",
-      "PHP + SQL backend with full CRUD"
+      "Aesthetic UI design",
+      "Responsive layout",
+      "Visual hierarchy",
+      "Modern typography"
     ],
-    liveUrl: "#"
+    review: {
+      text: "Beautiful and атмосферный дизайн. Strong visual mood.",
+      author: "Design Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/DreamApart/"
   },
+
+  {
+    id: 9,
+    title: "VR Lounge 2",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript", "GSAP"],
+    year: "2025",
+    country: "🇺🇸 United States",
+    client: "VR Entertainment",
+    platform: "Fiverr",
+    image: "images/VRLounge.png",
+    gallery: [{ type: "image", src: "images/VRLounge.png" }],
+    brief: "A high-impact landing page for a VR business with focus on animations and conversion.",
+    deliverables: [
+      "GSAP animations",
+      "Interactive sections",
+      "Responsive layout",
+      "Conversion-focused design"
+    ],
+    review: {
+      text: "Modern, smooth, and very engaging. Exactly what we needed.",
+      author: "Client · USA"
+    },
+    liveUrl: "https://oleksandr549.github.io/VRLounge2.github.io/"
+  },
+
+  {
+    id: 10,
+    title: "Restaurant Business",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Restaurant",
+    platform: "Personal",
+    image: "images/Restaurant.png",
+    gallery: [{ type: "image", src: "images/Restaurant.png" }],
+    brief: "A restaurant landing page showcasing menu, atmosphere, and booking flow.",
+    deliverables: [
+      "Restaurant UI",
+      "Menu section",
+      "Responsive design",
+      "Call-to-action blocks"
+    ],
+    review: {
+      text: "Clean and appetizing design. Works great for a restaurant.",
+      author: "UI Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/Restaurant-Busienss.github.io/"
+  },
+
+  {
+    id: 11,
+    title: "TaskFlow",
+    type: "Web App",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Productivity Concept",
+    platform: "Personal",
+    image: "images/TaskFlow.png",
+    gallery: [{type: "image", src: "images/TaskFlow4.png"},
+                {type: "image", src: "images/TaskFlow1.png"},
+                {type: "image", src: "images/TaskFlow2.png"},
+                {type: "image", src: "images/TaskFlow3.png"},
+     ],
+    brief: "A productivity tool interface designed for task management and workflow organization.",
+    deliverables: [
+      "Dashboard UI",
+      "Task system layout",
+      "Responsive design",
+      "Minimal UX"
+    ],
+    review: {
+      text: "Simple and effective. Great base for a SaaS product.",
+      author: "Product Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/TaskFlow.github.io/"
+  },
+
+  {
+    id: 12,
+    title: "CaseHyg",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Medical / Hygiene",
+    platform: "Personal",
+    image: "images/CaseHyg.png",
+    gallery: [{ type: "image", src: "images/CaseHyg.png" }],
+    brief: "A clean and trust-focused landing page for a hygiene/medical product.",
+    deliverables: [
+      "Clean UI design",
+      "Trust-focused layout",
+      "Responsive structure",
+      "Product presentation"
+    ],
+    review: {
+      text: "Very clean and professional. Builds trust immediately.",
+      author: "Client Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/CaseHyg.github.io/"
+  },
+
+  {
+    id: 13,
+    title: "HTP Platform",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Business",
+    platform: "Personal",
+    image: "images/HTP.png",
+    gallery: [{ type: "image", src: "images/HTP.png" }],
+    brief: "A business landing page with structured sections and clear messaging.",
+    deliverables: [
+      "Corporate UI",
+      "Responsive layout",
+      "Content structure",
+      "CTA sections"
+    ],
+    review: {
+      text: "Clear and structured. Good for business presentation.",
+      author: "Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/HTP.github.io/"
+  },
+
+  {
+    id: 14,
+    title: "Ski Carv",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Sports",
+    platform: "Personal",
+    image: "images/Ski.png",
+    gallery: [{ type: "image", src: "images/Ski.png" }],
+    brief: "A dynamic landing page for a sports-related product with energetic visuals.",
+    deliverables: [
+      "Sport-style UI",
+      "Responsive design",
+      "Visual layout",
+      "Modern typography"
+    ],
+    review: {
+      text: "Dynamic and energetic design. Matches the product well.",
+      author: "Design Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/Ski-Carv.github.io/"
+  },
+
+  {
+    id: 15,
+    title: "Fiverr Demo",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Freelance Demo",
+    platform: "Fiverr",
+    image: "images/Fiverr.png",
+    gallery: [{ type: "image", src: "images/Fiverr.png" }],
+    brief: "A demo landing page created to showcase freelance capabilities and attract clients.",
+    deliverables: [
+      "Conversion-focused layout",
+      "Responsive design",
+      "Modern UI",
+      "Portfolio-ready structure"
+    ],
+    review: {
+      text: "Great showcase piece. Perfect for attracting clients.",
+      author: "Freelance Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/fiverdemo.github.io/"
+  },
+
+  {
+    id: 16,
+    title: "FinSweet Style Website",
+    type: "Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
+    country: "🌍 Global",
+    client: "Web Design Concept",
+    platform: "Personal",
+    image: "images/Finsweet.png",
+    gallery: [{ type: "image", src: "images/Finsweet.png" }],
+    brief: "A modern website inspired by premium agency design trends with clean layout and strong UI.",
+    deliverables: [
+      "Agency-style UI",
+      "Responsive layout",
+      "Modern design system",
+      "Clean structure"
+    ],
+    review: {
+      text: "Looks like a premium agency website. Clean and modern.",
+      author: "Design Feedback"
+    },
+    liveUrl: "https://oleksandr549.github.io/finsweetwebsiteoleksandr.github.io/home.html"
+  }
+  
+
   // ─── ADD YOUR OWN PROJECTS HERE ──────────────────────────────
   // {
   //   id: 5,

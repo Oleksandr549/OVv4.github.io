@@ -1,8 +1,19 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* ─── SCROLL PROGRESS BAR ─── */
+(function () {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
 /* ─── NAV + BURGER ─── */
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>60));
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',window.scrollY>60));
 (function(){
   const burger=document.getElementById('navBurger');
   const mobile=document.getElementById('navMobile');
@@ -306,7 +317,15 @@ document.querySelectorAll('.gsap-card').forEach((card,i)=>{
 
     requestAnimationFrame(draw);
   }
-  draw();
+
+  let revealVisible = false;
+  new IntersectionObserver(e => { revealVisible = e[0].isIntersecting; }, { threshold: 0 }).observe(section);
+
+  function drawLoop(){
+    if(revealVisible) draw();
+    requestAnimationFrame(drawLoop);
+  }
+  drawLoop();
 
   // scrub progress with scroll
   ScrollTrigger.create({
@@ -377,6 +396,20 @@ document.querySelectorAll('.gsap-card').forEach((card,i)=>{
   });
 })();
 
+/* ─── FOOTER MARQUEE REVEAL ─── */
+(function(){
+  const marquee = document.getElementById('footMarquee');
+  if(!marquee) return;
+  let lit = false;
+  const io = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting && !lit){
+      lit = true;
+      setTimeout(() => marquee.classList.add('lit'), 600);
+      io.disconnect();
+    }
+  }, {threshold: 0.15});
+  io.observe(marquee);
+})();
 
 /* ─── GRID HOVER LIGHTING ─── */
 (function(){
@@ -584,6 +617,41 @@ document.querySelectorAll('.gsap-card').forEach((card,i)=>{
       n.el.style.transform=`translate(-50%,-50%) translate(${n.cx}px,${n.cy}px) rotate(${fr}deg)`;
     });
   })(0);
+})();
+
+/* ─── KEYBOARD TAB NAVIGATION FOR PROJECT SLIDES ─── */
+(function(){
+  const wrap   = document.getElementById('projScrollWrap');
+  const track  = document.getElementById('projTrack');
+  if(!wrap || !track) return;
+
+  const slides = Array.from(track.querySelectorAll('.proj-slide'));
+  slides.forEach(slide => {
+    slide.setAttribute('tabindex', '0');
+
+    slide.addEventListener('focus', () => {
+      // Calculate what scroll position would center this slide
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const maxX = Math.max(0, track.scrollWidth - window.innerWidth);
+      const wrapHeight = wrap.offsetHeight;
+      const viewH = window.innerHeight;
+
+      // Find target scroll progress to show this slide
+      const targetX = Math.min(maxX, Math.max(0, slideCenter - window.innerWidth / 2));
+      const targetProgress = maxX > 0 ? targetX / maxX : 0;
+      const targetScroll = wrap.offsetTop + targetProgress * (wrapHeight - viewH);
+
+      window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+    });
+
+    // Allow Enter key to navigate to project
+    slide.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        slide.click();
+      }
+    });
+  });
 })();
 
 ScrollTrigger.refresh();
